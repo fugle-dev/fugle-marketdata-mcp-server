@@ -1,0 +1,20 @@
+{
+  "symbol": { "type": "string", "desc": "股票代號", "required": true },
+  "type": { "type": "string", "desc": "證券類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別" },
+  "timeframe": { "type": "string", "desc": "Ｋ線週期", "required": true },
+  "data": { 
+    "type": "array", 
+    "desc": "Ｋ線資料",
+    "items": {
+      "date": { "type": "string", "desc": "日期" },
+      "open": { "type": "number", "desc": "開盤價" },
+      "high": { "type": "number", "desc": "最高價" },
+      "low": { "type": "number", "desc": "最低價" },
+      "close": { "type": "number", "desc": "收盤價" },
+      "volume": { "type": "number", "desc": "成交量" },
+      "change": { "type": "number", "desc": "漲跌" }
+    }
+  }
+}

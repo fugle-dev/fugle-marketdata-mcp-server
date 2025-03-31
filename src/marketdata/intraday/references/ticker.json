@@ -1,0 +1,61 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "type": { "type": "string", "desc": "Ticker 類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別" },
+  "symbol": { "type": "string", "desc": "股票代碼", "required": true },
+  "name": { "type": "string", "desc": "股票簡稱", "required": true },
+  "nameEn": { "type": "string", "desc": "股票英文簡稱" },
+  "industry": { "type": "string", "desc": "產業別" },
+  "securityType": { "type": "string", "desc": "證券別，參閱證券別代碼" },
+  "previousClose": { "type": "number", "desc": "前一交易日收盤價" },
+  "referencePrice": { "type": "number", "desc": "參考價" },
+  "limitUpPrice": { "type": "number", "desc": "漲停價（興櫃股不適用）" },
+  "limitDownPrice": { "type": "number", "desc": "跌停價（興櫃股不適用）" },
+  "canDayTrade": { "type": "boolean", "desc": "可買賣現沖（興櫃股不適用）" },
+  "canBuyDayTrade": { "type": "boolean", "desc": "可先買現沖（興櫃股不適用）" },
+  "canBelowFlatMarginShortSell": {
+    "type": "boolean",
+    "desc": "平盤下得融券賣出（興櫃股不適用）"
+  },
+  "canBelowFlatSBLShortSell": {
+    "type": "boolean",
+    "desc": "平盤下得借券賣出（興櫃股不適用）"
+  },
+  "isAttention": { "type": "boolean", "desc": "注意股" },
+  "isDisposition": { "type": "boolean", "desc": "處置股" },
+  "isUnusuallyRecommended": {
+    "type": "boolean",
+    "desc": "投資理財節目異常推介個股（興櫃股不適用）"
+  },
+  "isSpecificAbnormally": {
+    "type": "boolean",
+    "desc": "特殊異常個股（興櫃股不適用）"
+  },
+  "matchingInterval": {
+    "type": "number",
+    "desc": "撮合循環秒數（興櫃股不適用）"
+  },
+  "securityStatus": {
+    "type": "string",
+    "desc": "證券狀態，分別有 NORMAL, TERMINATED, SUSPENDED 狀態"
+  },
+  "boardLot": { "type": "number", "desc": "交易單位" },
+  "tradingCurrency": { "type": "string", "desc": "交易幣別" },
+  "exercisePrice": { "type": "number", "desc": "履約價格（限權證）" },
+  "exercisedVolume": {
+    "type": "number",
+    "desc": "前一交易日履約數量（限權證）"
+  },
+  "cancelledVolume": {
+    "type": "number",
+    "desc": "前一交易日註銷數量（限權證）"
+  },
+  "remainingVolume": { "type": "number", "desc": "發行餘額量（限權證）" },
+  "exerciseRatio": { "type": "number", "desc": "行使比率（限權證）" },
+  "knockInPrice": { "type": "number", "desc": "上限價格（限權證）" },
+  "knockOutPrice": { "type": "number", "desc": "下限價格（限權證）" },
+  "maturityDate": { "type": "string", "desc": "到期日（限權證）" },
+  "openTime": { "type": "string", "desc": "開盤時間（限指數）" },
+  "closeTime": { "type": "string", "desc": "收盤時間（限指數）" }
+}

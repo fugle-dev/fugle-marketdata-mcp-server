@@ -1,0 +1,19 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "type": { "type": "string", "desc": "Ticker 類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別", "required": true },
+  "symbol": { "type": "string", "desc": "股票代碼", "required": true },
+  "name": { "type": "string", "desc": "股票簡稱", "required": true },
+  "openPrice": { "type": "number", "desc": "最後交易日開盤價", "required": true },
+  "highPrice": { "type": "number", "desc": "最後交易日最高價", "required": true },
+  "lowPrice": { "type": "number", "desc": "最後交易日最低價", "required": true },
+  "closePrice": { "type": "number", "desc": "最後交易日收盤價", "required": true },
+  "change": { "type": "number", "desc": "最後交易日漲跌", "required": true },
+  "changePercent": { "type": "number", "desc": "最後交易日漲跌幅", "required": true },
+  "tradeVolume": { "type": "number", "desc": "最後交易日成交量", "required": true },
+  "tradeValue": { "type": "number", "desc": "最後交易日成交金額", "required": true },
+  "previousClose": { "type": "number", "desc": "前一交易日收盤價", "required": true },
+  "week52High": { "type": "number", "desc": "近 52 週高點", "required": true },
+  "week52Low": { "type": "number", "desc": "近 52 週低點", "required": true }
+}

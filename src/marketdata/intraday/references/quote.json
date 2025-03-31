@@ -1,0 +1,109 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "type": { "type": "string", "desc": "Ticker 類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別", "required": true },
+  "symbol": { "type": "string", "desc": "股票代碼", "required": true },
+  "name": { "type": "string", "desc": "股票簡稱", "required": true },
+  "referencePrice": { "type": "number", "desc": "今日參考價" },
+  "previousClose": { "type": "number", "desc": "昨日收盤價" },
+  "openPrice": { "type": "number", "desc": "開盤價" },
+  "openTime": { "type": "number", "desc": "開盤價成交時間" },
+  "highPrice": { "type": "number", "desc": "最高價" },
+  "highTime": { "type": "number", "desc": "最高價成交時間" },
+  "lowPrice": { "type": "number", "desc": "最低價" },
+  "lowTime": { "type": "number", "desc": "最低價成交時間" },
+  "closePrice": { "type": "number", "desc": "收盤價（最後成交價）" },
+  "closeTime": { "type": "number", "desc": "收盤價（最後成交價）成交時間" },
+  "avgPrice": { "type": "number", "desc": "當日成交均價" },
+  "change": { "type": "number", "desc": "最後一筆成交漲跌（含試撮）" },
+  "changePercent": { "type": "number", "desc": "最後一筆成交漲跌幅（含試撮）" },
+  "amplitude": { "type": "number", "desc": "當日振幅" },
+  "lastPrice": { "type": "number", "desc": "最後一筆成交價（含試撮）" },
+  "lastSize": { "type": "number", "desc": "最後一筆成交數量（含試撮）" },
+  "bids": {
+    "type": "array",
+    "desc": "最佳五檔委買",
+    "items": {
+      "price": { "type": "number", "desc": "最佳五檔委買價格" },
+      "size": { "type": "number", "desc": "最佳五檔委買數量" }
+    }
+  },
+  "asks": {
+    "type": "array",
+    "desc": "最佳五檔委賣",
+    "items": {
+      "price": { "type": "number", "desc": "最佳五檔委賣價格" },
+      "size": { "type": "number", "desc": "最佳五檔委賣數量" }
+    }
+  },
+  "total": {
+    "type": "object",
+    "desc": "統計資訊",
+    "properties": {
+      "tradeValue": { "type": "number", "desc": "累計成交金額" },
+      "tradeVolume": { "type": "number", "desc": "累計成交量" },
+      "tradeVolumeAtBid": { "type": "number", "desc": "累計內盤成交量" },
+      "tradeVolumeAtAsk": { "type": "number", "desc": "累計外盤成交量" },
+      "transaction": { "type": "number", "desc": "累計成交筆數" },
+      "time": { "type": "number", "desc": "統計時間" }
+    }
+  },
+  "lastTrade": {
+    "type": "object",
+    "desc": "最後一筆成交資訊",
+    "properties": {
+      "bid": { "type": "number", "desc": "最後一筆成交買價" },
+      "ask": { "type": "number", "desc": "最後一筆成交賣價" },
+      "price": { "type": "number", "desc": "最後一筆成交價格" },
+      "size": { "type": "number", "desc": "最後一筆成交數量" },
+      "time": { "type": "number", "desc": "最後一筆成交時間" },
+      "serial": { "type": "number", "desc": "最後一筆成交流水號" }
+    }
+  },
+  "lastTrial": {
+    "type": "object",
+    "desc": "最後一筆試撮資訊",
+    "properties": {
+      "bid": { "type": "number", "desc": "最後一筆試撮買價" },
+      "ask": { "type": "number", "desc": "最後一筆試撮賣價" },
+      "price": { "type": "number", "desc": "最後一筆試撮價格" },
+      "size": { "type": "number", "desc": "最後一筆試撮數量" },
+      "time": { "type": "number", "desc": "最後一筆試撮時間" },
+      "serial": { "type": "number", "desc": "最後一筆試撮流水號" }
+    }
+  },
+  "tradingHalt": {
+    "type": "object",
+    "desc": "暫停交易",
+    "properties": {
+      "isHalted": {
+        "type": "boolean",
+        "desc": "暫停交易：`true`；恢復交易：`false`"
+      },
+      "time": { "type": "number", "desc": "暫停交易時間／恢復交易時間" }
+    }
+  },
+  "isLimitDownPrice": {
+    "type": "boolean",
+    "desc": "最後成交價為跌停價：`true`"
+  },
+  "isLimitUpPrice": { "type": "boolean", "desc": "最後成交價為漲停價：`true`" },
+  "isLimitDownBid": { "type": "boolean", "desc": "最佳一檔委買跌停價：`true`" },
+  "isLimitUpBid": { "type": "boolean", "desc": "最佳一檔委買漲停價：`true`" },
+  "isLimitDownAsk": { "type": "boolean", "desc": "最佳一檔委賣跌停價：`true`" },
+  "isLimitUpAsk": { "type": "boolean", "desc": "最佳一檔委賣漲停價：`true`" },
+  "isLimitDownHalt": {
+    "type": "boolean",
+    "desc": "暫緩撮合且瞬間趨跌：`true`"
+  },
+  "isLimitUpHalt": { "type": "boolean", "desc": "暫緩撮合且瞬間趨漲：`true`" },
+  "isTrial": { "type": "boolean", "desc": "試撮階段：`true`" },
+  "isDelayedOpen": { "type": "boolean", "desc": "延後開盤信號：`true`" },
+  "isDelayedClose": { "type": "boolean", "desc": "延後收盤信號：`true`" },
+  "isContinuous": { "type": "boolean", "desc": "最後成交為逐筆交易：`true`" },
+  "isOpen": { "type": "boolean", "desc": "開盤信號：`true`" },
+  "isClose": { "type": "boolean", "desc": "收盤信號：`true`" },
+  "lastUpdated": { "type": "number", "desc": "最後更新時間" },
+  "serial": { "type": "number", "desc": "流水號" }
+}

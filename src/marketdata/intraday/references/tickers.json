@@ -1,0 +1,19 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "type": { "type": "string", "desc": "Ticker 類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別" },
+  "industry": { "type": "string", "desc": "產業別" },
+  "isNormal": { "type": "boolean", "desc": "查詢正常股票（非注意、處置股票）" },
+  "isAttention": { "type": "boolean", "desc": "查詢注意股票" },
+  "isDisposition": { "type": "boolean", "desc": "查詢處置股票" },
+  "isHalted": { "type": "boolean", "desc": "查詢暫停交易股票" },
+  "data": {
+    "type": "array",
+    "desc": "股票列表",
+    "items": {
+      "symbol": { "type": "string", "desc": "股票代碼" },
+      "name": { "type": "string", "desc": "股票簡稱" }
+    }
+  }
+}

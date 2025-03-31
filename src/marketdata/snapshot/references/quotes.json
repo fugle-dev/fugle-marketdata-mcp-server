@@ -1,0 +1,26 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "time": { "type": "string", "desc": "時間", "required": true },
+  "market": { "type": "string", "desc": "市場別", "required": true },
+  "data": { 
+    "type": "array", 
+    "desc": "快照資料",
+    "required": true,
+    "items": {
+      "type": { "type": "string", "desc": "Ticker 類型" },
+      "symbol": { "type": "string", "desc": "股票代碼" },
+      "name": { "type": "string", "desc": "股票簡稱" },
+      "openPrice": { "type": "number", "desc": "開盤價" },
+      "highPrice": { "type": "number", "desc": "最高價" },
+      "lowPrice": { "type": "number", "desc": "最低價" },
+      "closePrice": { "type": "number", "desc": "收盤價" },
+      "change": { "type": "number", "desc": "漲跌" },
+      "changePercent": { "type": "number", "desc": "漲跌幅" },
+      "tradeVolume": { "type": "number", "desc": "成交量" },
+      "tradeValue": { "type": "number", "desc": "成交金額" },
+      "lastUpdated": { "type": "number", "desc": "快照時間" },
+      "lastPrice": { "type": "number", "desc": "最後一筆成交價（含試撮）" },
+      "isTrial": { "type": "boolean", "desc": "試撮註記" }
+    }
+  }
+}

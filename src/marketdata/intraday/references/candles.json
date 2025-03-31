@@ -1,0 +1,25 @@
+{
+  "date": { "type": "string", "desc": "日期", "required": true },
+  "type": { "type": "string", "desc": "Ticker 類型", "required": true },
+  "exchange": { "type": "string", "desc": "交易所", "required": true },
+  "market": { "type": "string", "desc": "市場別" },
+  "symbol": { "type": "string", "desc": "股票代號", "required": true },
+  "timeframe": { "type": "string", "desc": "Ｋ線週期", "required": true },
+  "data": {
+    "type": "array",
+    "desc": "Ｋ線資料",
+    "required": true,
+    "items": {
+      "date": { "type": "string", "desc": "Ｋ線時間" },
+      "open": { "type": "number", "desc": "Ｋ線開盤價" },
+      "high": { "type": "number", "desc": "Ｋ線最高價" },
+      "low": { "type": "number", "desc": "Ｋ線最低價" },
+      "close": { "type": "number", "desc": "Ｋ線收盤價" },
+      "volume": {
+        "type": "number",
+        "desc": "Ｋ線成交量（整股：成交張數；興櫃股票及盤中零股：成交股數；指數：成交金額）"
+      },
+      "average": { "type": "number", "desc": "成交均價" }
+    }
+  }
+}
